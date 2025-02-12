@@ -22,10 +22,9 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
     position: relative;
-    transition: height 0.5s ease-in-out;
-    
+    transition: padding 0.5s ease-in-out; /* Change transition from height to padding */
+    padding: 40vh 0; /* Create space before shrinking */
 }
 
 h1 {
@@ -44,7 +43,7 @@ h1 {
 }
 
 p {
-    font-size: 5vw;
+    font-size: 20vw;
     color: #333;
     font-family: 'Great Vibes', cursive;
     opacity: 0;
@@ -65,13 +64,14 @@ p {
 
 .content {
     text-align: center;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    padding-bottom: 60px;
+    opacity: 1; /**/
+    transition: all 0.5s ease-in-out;
+    padding: 20vh 0; /* Adjust space dynamically */
+    margin-bottom: 3vh;
 }
 
 button {
-    margin-top: 20px;
+    margin-bottom: 30px;
     padding: 10px 20px;
     font-size: 18px;
     background-color: #ff69b4;
@@ -79,9 +79,9 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.5s ease-in-out;
-    margin-bottom: 60px;
+    margin-bottom: 10vh;
 }
 
 .shrink {
@@ -91,11 +91,10 @@ button {
 }
 
 .shrink-container {
-    height: 10vh !important; /* Reduce height even further */
-    min-height: 10vh; /* Prevents collapsing */
-    margin-bottom: 90vh; /* Keeps enough space for scrolling */
-    transition: height 0.5s ease-in-out;
+    padding: 5vh 0 !important; /* Reduce padding instead of setting a fixed height */
+    transition: padding 0.5s ease-in-out;
 }
+
 
 .fade-in {
     opacity: 1 !important;
