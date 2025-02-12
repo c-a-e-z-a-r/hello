@@ -13,7 +13,7 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffc0cb;
+    background-color: rgb(255, 192, 203);
     text-align: center;
     overflow-x: hidden;
 }
@@ -75,17 +75,23 @@ p {
 }
 
 button {
-    margin-bottom: 30px;
     padding: 10px 20px;
     font-size: 18px;
-    background-color: #ff69b4;
+    background-color: rgb(255, 105, 180);
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
-    margin-bottom: 10vh;
+}
+
+.button1 {
+    margin-bottom: 3vh; /* Small gap before button2 */
+}
+
+.button2 {
+    margin-bottom: 20vh; /* Larger gap after button2 */
 }
 
 .shrink {
@@ -108,7 +114,7 @@ button {
     opacity: 1 !important;
 }
 
-.sunflower, .heart {
+.sunflower, .heart, .rain {
     position: absolute;
     width: 40px;
     height: 40px;
@@ -125,13 +131,17 @@ button {
     background-image: url('heart.png');
 }
 
+.rain{
+    background-image: url('rain.png');;
+}
+
 @keyframes fall {
     from {
         transform: translateY(-100vh) rotate(0deg);
         opacity: 1;
     }
     to {
-        transform: translateY(100vh) rotate(360deg);
+        transform: translateY(230vh) rotate(360deg);
         opacity: 0;
     }
 }
