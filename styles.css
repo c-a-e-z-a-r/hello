@@ -4,26 +4,50 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #ffc0cb;
     font-family: Arial, sans-serif;
+    background-color: #ffc0cb;
     text-align: center;
+    overflow-x: hidden;
+    
 }
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+}
+
 h1 {
-    font-size: 10vw;
+    font-size: 10vw; /* Increased size slightly */
     color: #333;
     font-family: 'Great Vibes', cursive;
     opacity: 0;
-    animation: fadeIn 2s ease-in forwards;
+    animation: fadeIn 2s ease-in forwards; /* Added fade-in animation */
+    position: fixed;
+    padding: 10px 10px; /* Added padding to prevent trimming on both sides */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s ease-in-out;
 }
+
+p {
+    font-size: 5vw; /* Increased size slightly */
+    color: #333;
+    font-family: 'Great Vibes', cursive;
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards; /* Added fade-in animation */
+    transition: all 0.5s ease-in-out;
+}
+
 @media (max-width: 600px) {
     h1 {
-        font-size: 10vw;
+        font-size: 12vw; /* Increased mobile size slightly */
     }
 }
 
@@ -32,14 +56,53 @@ h1 {
     to { opacity: 1; }
 }
 
-.sunflower {
+.content {
+    margin-top: 20vh; /* Adjusted from 100vh to 20vh to bring text closer */
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Ensures fade-in effect works */
+    padding-bottom: 60px; /* Added extra space below sentence and button */
+}
+
+button {
+    margin-top: 20px; /* Added margin to space button from text */
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Ensures fade-in effect works */
+    margin-bottom: 60px; /* Added extra space below button */
+}
+
+.shrink {
+    font-size: 3vw; /* Increased shrink size slightly */
+    top: 10%;
+    transform: translate(-50%, 0);
+}
+
+.fade-in {
+    opacity: 1 !important; /* Ensures elements fade in properly */
+}
+
+.sunflower, .heart {
     position: absolute;
     width: 40px;
     height: 40px;
-    background-image: url('sunflower.png');
     background-size: cover;
     animation: fall linear infinite;
-    top: -50px; /* Ensures sunflowers start off-screen at the top */
+    top: -50px; /* Ensures elements start off-screen at the top */
+}
+
+.sunflower {
+    background-image: url('sunflower.png');
+}
+
+.heart {
+    background-image: url('heart.png');
 }
 
 @keyframes fall {
