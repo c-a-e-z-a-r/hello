@@ -25,6 +25,10 @@ body {
     position: relative;
     transition: padding 0.5s ease-in-out; /* Change transition from height to padding */
     padding: 40vh 0; /* Create space before shrinking */
+    min-height: 100vh;
+    position: relative;
+    transition: height 0.5s ease-in-out;
+    
 }
 
 h1 {
@@ -93,6 +97,10 @@ button {
 .shrink-container {
     padding: 5vh 0 !important; /* Reduce padding instead of setting a fixed height */
     transition: padding 0.5s ease-in-out;
+    height: 10vh !important; /* Reduce height even further */
+    min-height: 10vh; /* Prevents collapsing */
+    margin-bottom: 90vh; /* Keeps enough space for scrolling */
+    transition: height 0.5s ease-in-out;
 }
 
 

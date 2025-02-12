@@ -5,6 +5,7 @@ window.addEventListener("scroll", function () {
 
         console.log("Current Scroll:", window.scrollY);
 
+        
         const title = document.querySelector("h1");
         const content = document.querySelector(".content");
         const button = document.querySelector("button");
@@ -19,6 +20,12 @@ window.addEventListener("scroll", function () {
             title.classList.remove("shrink");
             content.classList.remove("fade-in");
             //button.classList.remove("fade-in");
+            button.classList.add("fade-in");
+            container.classList.add("shrink-container");
+        } else {
+            title.classList.remove("shrink");
+            content.classList.remove("fade-in");
+            button.classList.remove("fade-in");
             container.classList.remove("shrink-container");
         }
     }, 100); // 100ms delay to avoid rapid flickering
