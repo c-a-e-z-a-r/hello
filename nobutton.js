@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (yesButton) {
         yesButton.style.transform = "scale(1)"; // Set initial size
-        yesButton.style.padding = "10px 20px"; // Add padding to top and bottom
+        yesButton.style.padding = "20px 30px"; // Add padding to top and bottom
     }
 
     if (noButton) {
