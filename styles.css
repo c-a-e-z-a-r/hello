@@ -76,16 +76,21 @@ p {
 
 button {
     padding: 10px 20px;
-    font-size: 18px;
+    font-size: 10vh;
     background-color: rgb(255, 105, 180);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 50px; /* Curved edges */
     cursor: pointer;
     opacity: 1;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out, transform 0.2s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
 }
 
+button:hover {
+    transform: scale(1.05); /* Slight increase in size on hover */
+    background-color: rgb(255, 85, 160);
+}
 .button1 {
     margin-bottom: 3vh; /* Small gap before button2 */
 }
@@ -95,7 +100,7 @@ button {
 }
 
 .button1 {
-    font-size: 70px;
+    font-size: 120px;
     font-family: 'Great Vibes', cursive;
     font-weight: bold;
     color: red;
@@ -104,12 +109,19 @@ button {
 }
 
 .button2 {
-    font-size: 50px;
+    font-size: 70px;
     font-family: 'Great Vibes', cursive;
     font-style: italic;
     color: darkred;
     text-align: center;
     padding: 20px 0;
+}
+
+.button1 button, .button2 button {
+    width: 100%; /* Makes button stretch to full width of container */
+    max-width: 400px; /* Prevents it from getting too large */
+    display: block;
+    margin: 0 auto; /* Centers button */
 }
 
 .shrink {
