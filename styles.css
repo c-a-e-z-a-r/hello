@@ -44,7 +44,7 @@ h1 {
 }
 
 p {
-    font-size: 20vw;
+    font-size: 25vw;
     color: #333;
     font-family: 'Great Vibes', cursive;
     opacity: 0;
@@ -96,7 +96,7 @@ button:hover {
 
 .button1 {
     margin-bottom: 3vh;
-    font-size: 15vh;
+    font-size: 20vh;
     font-family: 'Great Vibes', cursive;
     font-weight: bold;
     color: red;
@@ -105,7 +105,7 @@ button:hover {
 }
 
 .button2 {
-    margin-bottom: 12vh;
+    margin-bottom: 15vh;
     font-size: 5vw;
     font-family: 'Great Vibes', cursive;
     font-style: italic;
