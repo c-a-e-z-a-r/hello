@@ -21,9 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
         "......", ":<"
     ];
 
-    
-    let sunflowerChanged = false; // Track emoji state
-    let heartChanged = false;
 
     if (yesButton) {
         yesButton.style.transform = "scale(1)"; // Set initial size
