@@ -44,7 +44,7 @@ h1 {
 }
 
 p {
-    font-size: 25vw;
+    font-size: 20vw;
     color: #333;
     font-family: 'Great Vibes', cursive;
     opacity: 0;
@@ -105,8 +105,8 @@ button:hover {
 }
 
 .button2 {
-    margin-bottom: 15vh;
-    font-size: 5vw;
+    margin-bottom: 10vh;
+    font-size: 5vh;
     font-family: 'Great Vibes', cursive;
     font-style: italic;
     color: darkred;
@@ -115,6 +115,23 @@ button:hover {
     min-width: 50vw;
     word-wrap: break-word;
     text-align: center;
+}
+
+.love-text {
+    font-size: 15vw; /* Increase font size dynamically */
+    font-family: 'Great Vibes', cursive;
+    font-weight: bold;
+    color: red;
+    display: block;
+    margin-top: 2vh;
+}
+
+.marquee-text {
+    font-size: 15vw; /* Increase marquee text size */
+    font-weight: bold;
+    font-family: 'Great Vibes', cursive;
+    color: darkred;
+    white-space: nowrap;
 }
 
 .button1 button, .button2 button {

@@ -26,12 +26,13 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             
             // Remove YES button and replace with a message
-            button1Div.innerHTML = "<span class='love-text'>Yeheyy!!!</span>";
+            button1Div.innerHTML = "<span class='love-text'>Yeheyy!!! <br> See you baby!!! </span>"
+            ;
     
             // Replace NO button with a marquee message and gif
             button2Div.innerHTML = `
-                <marquee behavior="scroll" direction="left" scrollamount="20" class="marquee-text">
-                    You're my everything, as always and forever.
+                <marquee behavior="scroll" direction="left" scrollamount="17" class="marquee-text">
+                    You're my everything, as always and forever baby.
                 </marquee>
                 <img src="yehey.gif" alt="Yehey Celebration" class="celebration-gif">
             `;
