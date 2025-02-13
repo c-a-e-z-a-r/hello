@@ -94,6 +94,24 @@ button {
     margin-bottom: 20vh; /* Larger gap after button2 */
 }
 
+.button1 {
+    font-size: 70px;
+    font-family: 'Great Vibes', cursive;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.button2 {
+    font-size: 50px;
+    font-family: 'Great Vibes', cursive;
+    font-style: italic;
+    color: darkred;
+    text-align: center;
+    padding: 20px 0;
+}
+
 .shrink {
     font-size: 5vw;
     top: 5%; /* Moves it to the middle-top */
@@ -114,7 +132,7 @@ button {
     opacity: 1 !important;
 }
 
-.sunflower, .heart, .rain {
+.sunflower, .heart, .rain, .sad {
     position: absolute;
     width: 40px;
     height: 40px;
@@ -132,7 +150,11 @@ button {
 }
 
 .rain{
-    background-image: url('rain.png');;
+    background-image: url('rain.png');
+}
+
+.sad{
+    background-image: url('sad.png');
 }
 
 @keyframes fall {

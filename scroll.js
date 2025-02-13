@@ -28,5 +28,5 @@ window.addEventListener("scroll", function () {
             button.classList.remove("fade-in");
             container.classList.remove("shrink-container");
         }
-    }, 100); // 100ms delay to avoid rapid flickering
+    });
 });

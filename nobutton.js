@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const noButton = document.getElementById("no");
+    const yesButton = document.querySelector(".button1 button"); // Select the "YES" button
     let clickCount = -1;
 
     const colors = [
@@ -20,8 +21,14 @@ document.addEventListener("DOMContentLoaded", function () {
         "......", ":<"
     ];
 
+    
     let sunflowerChanged = false; // Track emoji state
     let heartChanged = false;
+
+    if (yesButton) {
+        yesButton.style.transform = "scale(1)"; // Set initial size
+        yesButton.style.padding = "10px 20px"; // Add padding to top and bottom
+    }
 
     if (noButton) {
         noButton.style.transition = "opacity 0.8s ease-in-out"; // Smooth fading
@@ -34,11 +41,35 @@ document.addEventListener("DOMContentLoaded", function () {
                 noButton.textContent = buttonTexts[clickCount]; // Change button text
             }
             
+            // 😢 After 10 clicks: Change sunflower → sad emoji
+            if (clickCount === 10) {
+                document.styleSheets[0].insertRule(".sunflower { background-image: url('sad.png') !important; }", document.styleSheets[0].cssRules.length);
+            }
+
+            // 🌧 After 20 clicks: Change heart → rain emoji
+            if (clickCount === 20) {
+                document.styleSheets[0].insertRule(".heart { background-image: url('rain.png') !important; }", document.styleSheets[0].cssRules.length);
+            }
 
             // 🎭 Smooth fade-out from click 20 to 30
             if (clickCount >= 20) {
                 let fadeAmount = Math.max(0, (30 - clickCount) / 10); // Gradual fade (1 → 0)
                 noButton.style.opacity = fadeAmount;
+            }
+
+            // ❌ Disable button after fading out
+            if (clickCount === 30) {
+                setTimeout(() => {
+                    noButton.disabled = true; // Disable button
+                    noButton.style.cursor = "not-allowed"; // Change cursor to indicate it's disabled
+                }, 800); // Wait for fade-out to complete
+            }
+
+            // 🔥 Increase YES button size (max 30 clicks)
+            if (yesButton && clickCount <= 30) {
+                let newSize = 1 + clickCount * 0.05; // Increase by 5% per click
+                yesButton.style.transform = `scale(${Math.min(newSize, 2.5)})`; // Max scale 2.5x
+                yesButton.style.padding = `${10 + clickCount}px ${20 + clickCount * 0.5}px`; // Increase padding
             }
         });
     }
