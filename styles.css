@@ -96,7 +96,7 @@ button:hover {
 
 .button1 {
     margin-bottom: 3vh;
-    font-size: 15vw;
+    font-size: 15vh;
     font-family: 'Great Vibes', cursive;
     font-weight: bold;
     color: red;
@@ -105,7 +105,7 @@ button:hover {
 }
 
 .button2 {
-    margin-bottom: 10vh;
+    margin-bottom: 12vh;
     font-size: 5vw;
     font-family: 'Great Vibes', cursive;
     font-style: italic;
