@@ -44,7 +44,7 @@ h1 {
 }
 
 p {
-    font-size: 20vw;
+    font-size: 19vw;
     color: #333;
     font-family: 'Great Vibes', cursive;
     opacity: 0;
@@ -96,7 +96,7 @@ button:hover {
 
 .button1 {
     margin-bottom: 3vh;
-    font-size: 20vh;
+    font-size: 10vh;
     font-family: 'Great Vibes', cursive;
     font-weight: bold;
     color: red;
@@ -127,7 +127,7 @@ button:hover {
 }
 
 .marquee-text {
-    font-size: 15vw; /* Increase marquee text size */
+    font-size: 10vw; /* Increase marquee text size */
     font-weight: bold;
     font-family: 'Great Vibes', cursive;
     color: darkred;
