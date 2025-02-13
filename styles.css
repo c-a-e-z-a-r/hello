@@ -17,18 +17,16 @@ body {
     text-align: center;
     overflow-x: hidden;
 }
+
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
-    transition: padding 0.5s ease-in-out; /* Change transition from height to padding */
-    padding: 40vh 0; /* Create space before shrinking */
+    transition: padding 0.5s ease-in-out;
+    padding: 40vh 0;
     min-height: 100vh;
     position: relative;
-    transition: height 0.5s ease-in-out;
-    
 }
 
 h1 {
@@ -38,12 +36,11 @@ h1 {
     opacity: 0;
     animation: fadeIn 2s ease-in forwards;
     position: fixed;
-    padding: 10px 10px;
+    padding: 10px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     transition: all 0.5s ease-in-out;
-    
 }
 
 p {
@@ -68,16 +65,15 @@ p {
 
 .content {
     text-align: center;
-    opacity: 1; /**/
+    opacity: 1;
     transition: all 0.5s ease-in-out;
-    padding: 20vh 0; /* Adjust space dynamically */
+    padding: 20vh 0;
     margin-bottom: 3vh;
 }
 
+/* Buttons */
 button {
-    padding: 10px 30px; /* Adjust padding */
-    min-width: 150px; /* Ensure button doesn't shrink too much */
-    font-size: 10vh;
+    font-size: 4vw; /* Dynamically scale text */
     background-color: rgb(255, 105, 180);
     color: white;
     border: none;
@@ -86,65 +82,69 @@ button {
     opacity: 1;
     transition: opacity 0.5s ease-in-out, transform 0.2s ease-in-out;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    padding: 2vh 4vw; /* Dynamic padding based on viewport */
+    min-width: 40vw; /* Ensure button width adapts */
+    min-height: 6vh; /* Prevent text cutoff */
+    white-space: nowrap; /* Prevent text wrapping */
+    text-align: center;
 }
 
 button:hover {
-    transform: scale(1.05); /* Slight increase in size on hover */
+    transform: scale(1.05);
     background-color: rgb(255, 85, 160);
 }
-.button1 {
-    margin-bottom: 3vh; /* Small gap before button2 */
-}
-
-.button2 {
-    margin-bottom: 20vh; /* Larger gap after button2 */
-}
 
 .button1 {
-    font-size: 120px;
+    margin-bottom: 3vh;
+    font-size: 7vw;
     font-family: 'Great Vibes', cursive;
     font-weight: bold;
     color: red;
     text-align: center;
-    padding: 20px 0;
+    padding: 3vh 0;
 }
 
 .button2 {
-    font-size: 70px;
+    margin-bottom: 10vh;
+    font-size: 5vw;
     font-family: 'Great Vibes', cursive;
     font-style: italic;
     color: darkred;
     text-align: center;
-    padding: max(10px, 2vh) 0; /* Adjust padding based on text size */
+    padding: 3vh 2vw;
+    min-width: 50vw;
+    word-wrap: break-word;
+    text-align: center;
 }
 
 .button1 button, .button2 button {
-    width: 100%; /* Makes button stretch to full width of container */
-    max-width: 400px; /* Prevents it from getting too large */
-    display: block;
-    margin: 0 auto; /* Centers button */
+    width: auto;
+    max-width: 90vw;
+    min-width: 50vw;
+    padding: 2vh 3vw;
+    font-size: 4vw;
 }
 
 .shrink {
     font-size: 5vw;
-    top: 5%; /* Moves it to the middle-top */
+    top: 5%;
     transform: translate(-50%, 0);
 }
 
 .shrink-container {
-    padding: 5vh 0 !important; /* Reduce padding instead of setting a fixed height */
+    padding: 5vh 0 !important;
     transition: padding 0.5s ease-in-out;
-    height: 10vh !important; /* Reduce height even further */
-    min-height: 10vh; /* Prevents collapsing */
-    margin-bottom: 90vh; /* Keeps enough space for scrolling */
+    height: 10vh !important;
+    min-height: 10vh;
+    margin-bottom: 90vh;
     transition: height 0.5s ease-in-out;
 }
-
 
 .fade-in {
     opacity: 1 !important;
 }
 
+/* Emojis */
 .sunflower, .heart, .rain, .sad {
     position: absolute;
     width: 40px;
@@ -162,11 +162,11 @@ button:hover {
     background-image: url('heart.png');
 }
 
-.rain{
+.rain {
     background-image: url('rain.png');
 }
 
-.sad{
+.sad {
     background-image: url('sad.png');
 }
 
